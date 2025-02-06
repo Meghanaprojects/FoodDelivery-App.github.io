@@ -77,7 +77,13 @@ Start Apache Tomcat in Eclipse.
 http://localhost:8080/Yummiq/home.
 
 📷 Snapshots / Visuals
+![Screenshot 2025-02-06 204815](https://github.com/user-attachments/assets/642fb717-2c86-432f-bbce-2f78e5525e6e)
 
+![Screenshot 2025-02-06 205857](https://github.com/user-attachments/assets/5083edc1-6efd-4324-9d5b-bbf4953cdf01)
+
+![Screenshot 2025-02-06 205914](https://github.com/user-attachments/assets/6d5ba7ce-f05b-4927-b194-e3e520eb1593)
+
+![Screenshot 2025-02-06 205946](https://github.com/user-attachments/assets/46ad7181-8e21-4db2-9e02-86796155b2ed)
 
 # 📩 Contact
 
