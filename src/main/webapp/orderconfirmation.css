@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.order-confirmation {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.order-number {
+    color: #666;
+    font-size: 1rem;
+}
+
+.success-message {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.checkmark {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #4CAF50;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.order-details {
+    margin-bottom: 2rem;
+}
+
+.order-details h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.item, .subtotal, .shipping, .total {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.item {
+    color: #666;
+}
+
+.subtotal {
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.total {
+    border-top: 2px solid #eee;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.shipping-info {
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+}
+
+.shipping-info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.shipping-info p {
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+/* Ensure the video is properly styled within the order-confirmation */
+.animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 1rem;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.animation video {
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+}
+
+/* Hide animation by default */
+.animation video {
+    display: none;
+}
+
+/* Show animation when order is confirmed */
+.order-confirmation:target .animation video {
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .order-confirmation {
+        padding: 1.5rem;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+}

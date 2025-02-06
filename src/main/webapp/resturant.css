@@ -1,0 +1,320 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f97316; /* Brand color */
+}
+
+.nav-links {
+    display: flex;
+     align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #4b5563; /* Text color */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #f97316; /* Hover color */
+}
+
+/* Profile Dropdown */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-icon {
+    cursor: pointer;
+    display: flex; /* Use flex to align icon and text */
+    align-items: center;
+    font-size: 1rem; /* Match font size with other links */
+    color: #4b5563; /* Default icon color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+    padding: 12px 0px; /* Add padding for better click area */
+}
+
+.profile-icon:hover {
+    color: #f97316; /* Change color on hover */
+}
+
+.dropdown-content {
+    display: none; /* Initially hidden */
+    opacity: 0; /* Start with opacity 0 */
+    position: absolute;
+    background-color: #ffffff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    z-index: 1;
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.dropdown-content a {
+    color: #333; /* Default text color */
+    padding: 12px 16px; /* Padding for menu items */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make links block elements */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.dropdown-content a:hover {
+    background-color: #f97316; /* Highlight color */
+    color: white; /* Change text color on hover */
+}
+
+/* Checkbox to control dropdown display */
+#profile-toggle {
+    display: none; /* Hide the checkbox */
+}
+
+#profile-toggle:checked + .profile-icon + .dropdown-content {
+    display: block; /* Show dropdown */
+    opacity: 1; /* Fade in */
+}
+
+/* Header */
+.header {
+    background-color: #f97316; /* Header background color */
+    color: white;
+    padding: 1rem 1rem;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .restaurant-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Restaurant Card */
+.restaurant-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.restaurant-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.restaurant-info {
+    padding: 1.5rem;
+}
+
+.restaurant-info h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #111827;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+}
+
+/* New class for the combined rating and cuisine type */
+.rating-cuisine {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between items */
+    width: 100%; /* Make it take the full width */
+    align-items: center; /* Center items vertically */
+}
+
+.rating {
+    margin-left: 1rem; /* Add space between cuisine type and rating */
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.status-open {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-closed {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Footer */
+.footer {
+    background-color: #111827; /* Footer background color */
+    color: #9ca3af; /* Footer text color */
+    padding: 3rem 1rem; /* Padding for the footer (top and bottom only) */
+    text-align: center; /* Center text in the footer */
+    width: 100%; /* Ensure the footer takes the full width */
+    margin: 0; /* Remove any margin */
+    position: relative; /* Keeps it within normal flow */
+}
+
+.footer-content {
+    max-width: 1280px; /* Maximum width for the footer content */
+    margin: 0 auto; /* Center the footer content */
+    display: grid; /* Use grid layout for footer sections */
+    grid-template-columns: 1fr; /* One column layout */
+    gap: 2rem; /* Gap between footer sections */
+    padding: 0 1rem; /* Optional: Add some horizontal padding to the content */
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr); /* Four columns on larger screens */
+    }
+}
+
+.footer-section h3 {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-section ul li a:hover {
+    color: #f97316; /* Hover color for footer links */
+}
+
+.footer-bottom {
+    margin-top: 2rem; /* Space above the copyright text */
+    font-size: 0.875rem; /* Font size for copyright text */
+    text-align: center; /* Center align copyright text */
+    width: 100%;
+}
+
+.social-links {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    gap: 0.5rem; /* Space between links */
+}
+
+.social-links a {
+    color: #9ca3af; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.2s; /* Transition for hover effect */
+}
+
+.social-links a:hover {
+    color: #f97316; /* Hover color */
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the search bar */
+    margin: 20px 0; /* Add some margin above and below */
+}
+
+.search-bar input[type="text"] {
+    width: 300px; /* Set a width for the input */
+    padding: 10px; /* Add padding for better appearance */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+.search-bar button {
+    padding: 10px 15px; /* Padding for the button */
+ background-color: #f97316; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    margin-left: 10px; /* Space between input and button */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.search-bar button:hover {
+    background-color: #d66a14; /* Darker shade on hover */
+}
