@@ -14,7 +14,7 @@ Yummiq is a dynamic web-based food delivery platform designed to provide users w
 
 * Checkout Process: Streamlined checkout with order summary and payment options.
 
-* Order Confirmation: Receive real-time order confirmation and tracking details.
+* Order Confirmation: Receive real-time order confirmation details.
 
 🛠 Technologies Used
 
