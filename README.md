@@ -1,4 +1,4 @@
-🍕 Yummiq - Food Delivery Web Application
+# 🍕 Yummiq - Food Delivery Web Application
 
 Yummiq is a dynamic web-based food delivery platform designed to provide users with a seamless experience for exploring restaurants, browsing menus, placing orders. Built using Java (JSP/Servlets), MySQL, and Apache Tomcat, this application ensures a smooth and efficient ordering process.
 
