@@ -2,7 +2,7 @@
 
 Yummiq is a dynamic web-based food delivery platform designed to provide users with a seamless experience for exploring restaurants, browsing menus, placing orders. Built using Java (JSP/Servlets), MySQL, and Apache Tomcat, this application ensures a smooth and efficient ordering process.
 
-🚀 Features
+# 🚀 Features
 
 * Restaurant Listing: Display a curated list of restaurants for users to choose from.
 
@@ -16,7 +16,7 @@ Yummiq is a dynamic web-based food delivery platform designed to provide users w
 
 * Order Confirmation: Receive real-time order confirmation details.
 
-🛠 Technologies Used
+# 🛠 Technologies Used
 
 Frontend: HTML, CSS
 
@@ -27,7 +27,7 @@ Database: MySQL
 Server: Apache Tomcat
 
 
-🔧 Installation and Setup
+# 🔧 Installation and Setup
 
 📌 Prerequisites
 
@@ -40,7 +40,7 @@ MySQL Database
 Eclipse IDE (or any IDE supporting Dynamic Web Projects)
 
 
-🛠 Steps to Set Up
+# 🛠 Steps to Set Up
 
 1. Set Up the Database
 
@@ -72,13 +72,13 @@ private static final String PASSWORD = "your_password";
 
 Start Apache Tomcat in Eclipse.
 
-Open a browser and visit:
+# Open a browser and visit:
 
 http://localhost:8080/Yummiq/home.
 
 📷 Snapshots / Visuals
 
 
-📩 Contact
+# 📩 Contact
 
 For any queries, reach out at cmeghana319@gmail.com.
