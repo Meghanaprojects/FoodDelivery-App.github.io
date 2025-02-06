@@ -42,13 +42,7 @@ Eclipse IDE (or any IDE supporting Dynamic Web Projects)
 
 🛠 Steps to Set Up
 
-1. Clone the Repository
-
-git clone https://github.com/MeghanaProjects/Yummiq.git
-cd Yummiq
-
-
-2. Set Up the Database
+1. Set Up the Database
 
 Open MySQL and create a database:
 
@@ -58,7 +52,7 @@ Import the provided yummiq.sql file to set up tables.
 
 
 
-3. Configure the Project in Eclipse
+2. Configure the Project in Eclipse
 
 Open Eclipse → File → Import → Dynamic Web Project → Select the Yummiq folder.
 
@@ -66,7 +60,7 @@ Configure Apache Tomcat as the server.
 
 Right-click on the project → Run on Server → Select Tomcat.
 
-4. Update Database Configuration
+3. Update Database Configuration
 
 Open web.xml or DBConnection.java and update credentials:
 
@@ -74,13 +68,13 @@ private static final String URL = "jdbc:mysql://localhost:3306/yummiq";
 private static final String USER = "your_username";
 private static final String PASSWORD = "your_password";
 
-5. Run the Application
+4. Run the Application
 
 Start Apache Tomcat in Eclipse.
 
 Open a browser and visit:
 
-http://localhost:8080/Yummiq/home
+http://localhost:8080/Yummiq/home.
 
 📷 Snapshots / Visuals
 
