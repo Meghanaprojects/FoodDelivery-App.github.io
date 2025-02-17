@@ -1,0 +1,67 @@
+To create a user table
+CREATE TABLE user (
+    userId INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    username VARCHAR(50) UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(15),
+    address VARCHAR(255),
+    role ENUM('Admin', 'Customer', 'DeliveryAgent'),
+    createdDate DATE,
+    lastLoginDate DATE
+);
+
+To create a restaurant table
+CREATE TABLE restaurant (
+    restaurantId INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    address VARCHAR(255),
+    phone VARCHAR(15),
+    rating DECIMAL(3, 2),
+    isActive boolean,
+    cuisineType VARCHAR(100),
+    eta Time,
+    adminUserId INT,
+    imagePath VARCHAR(255),
+    FOREIGN KEY (adminUserId) REFERENCES User(userId)
+);
+
+To create a menu table
+CREATE TABLE menu (
+    menuId INT PRIMARY KEY AUTO_INCREMENT,
+    restaurantId INT,
+    itemName VARCHAR(100) NOT NULL,
+    description TEXT,
+    price int,
+    ratings DECIMAL(3, 2),
+    isAvailable BOOLEAN,
+    imagePath VARCHAR(255),
+    FOREIGN KEY (restaurantId) REFERENCES restaurant(restaurantId)
+);
+
+To create a order table
+CREATE TABLE `order` (
+    orderId INT PRIMARY KEY AUTO_INCREMENT,
+    userId INT,
+    restaurantId INT,
+    orderDate DATE,
+    totalAmount int,
+    status VARCHAR(50),
+    paymentMode VARCHAR(50),
+    FOREIGN KEY (userId) REFERENCES user(userId),
+    FOREIGN KEY (restaurantId) REFERENCES restaurant(restaurantId)
+);
+
+To create a orderItem table
+CREATE TABLE orderItem (
+    orderItemId INT PRIMARY KEY AUTO_INCREMENT,
+    orderId INT,
+    menuId INT,
+    quantity INT,
+    totalPrice int,
+    FOREIGN KEY (orderId) REFERENCES `order`(orderId),
+    FOREIGN KEY (menuId) REFERENCES Menu(menuId)
+);
+
+
